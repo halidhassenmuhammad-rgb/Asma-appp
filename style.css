@@ -1,0 +1,377 @@
+
+/* =================================
+   ASMA APP — MADE WITH ❤️ BY KHALID
+   STEP 2: CSS DESIGN
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --green: #064e3b;
+    --green-light: #0b7655;
+    --navy: #081b33;
+    --gold: #d4af37;
+    --white: #ffffff;
+    --light: #f4f8f5;
+    --text: #24352d;
+    --muted: #718078;
+    --shadow: 0 8px 25px rgba(0,0,0,0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+button, select, input {
+    font: inherit;
+}
+
+/* MAIN CONTAINER */
+
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    min-height: 100vh;
+    background: var(--white);
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 38px 18px 32px;
+    color: white;
+    background: linear-gradient(135deg, var(--navy), var(--green));
+    overflow: hidden;
+}
+
+.logo {
+    font-family: 'Amiri', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    line-height: 1.4;
+}
+
+.subtitle {
+    color: #e4eee8;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.hero-decoration {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-top: 12px;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    padding: 13px;
+    overflow-x: auto;
+    background: var(--navy);
+    scrollbar-width: thin;
+}
+
+.navigation a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 0.78rem;
+    padding: 8px 13px;
+    border: 1px solid rgba(212,175,55,0.4);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+/* WELCOME */
+
+.welcome-section {
+    text-align: center;
+    padding: 28px 18px;
+    background: #f1f8f3;
+}
+
+.welcome-section h2 {
+    color: var(--green);
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+}
+
+.welcome-section p {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+/* GENERAL SECTIONS */
+
+.app-section {
+    margin: 18px 13px;
+    padding: 22px 17px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: var(--shadow);
+    border: 1px solid #edf1ee;
+    scroll-margin-top: 15px;
+}
+
+.app-section h2 {
+    color: var(--green);
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+.app-section h3 {
+    color: var(--navy);
+    margin: 14px 0 8px;
+}
+
+/* PRAYER TRACKER */
+
+.prayer-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.prayer-list label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 10px;
+    border-radius: 10px;
+    background: #f1f8f3;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--green);
+}
+
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-container p {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #e5ebe7;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar > * {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    border-radius: 20px;
+}
+
+/* BUTTONS AND SELECTS */
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 16px;
+    background: var(--green);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: var(--green-light);
+    transform: translateY(-1px);
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #dce5df;
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+}
+
+/* TASBIH */
+
+#dhikrText {
+    text-align: center;
+    color: var(--green);
+    font-family: 'Amiri', serif;
+    font-size: 1.7rem;
+    margin: 16px 0;
+}
+
+#counter {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 12px 0;
+}
+
+#countButton {
+    display: block;
+    width: 100%;
+    padding: 17px;
+    font-size: 1.1rem;
+    background: var(--green);
+}
+
+#resetButton {
+    display: block;
+    margin: 12px auto 0;
+    background: var(--navy);
+}
+
+/* QURAN */
+
+#quranContent {
+    margin-top: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f1f8f3;
+    white-space: pre-wrap;
+}
+
+#quranAudio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* HADITH */
+
+.hadith-card {
+    padding: 16px;
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    background: #f8f7ef;
+    margin-bottom: 15px;
+}
+
+.hadith-card p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.sunnah-list {
+    display: grid;
+    gap: 12px;
+}
+
+.sunnah-list label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px;
+    background: #f1f8f3;
+    border-radius: 8px;
+    font-size: 0.88rem;
+}
+
+/* FASTING */
+
+#fasting label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 9px;
+    background: #f1f8f3;
+    font-size: 0.88rem;
+}
+
+/* QUIZ */
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 9px 0;
+    background: #f1f8f3;
+    color: var(--text);
+    border: 1px solid #dce5df;
+}
+
+.quiz-option:hover {
+    background: var(--green);
+    color: white;
+}
+
+#quizResult {
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--green);
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 25px;
+    color: white;
+    background: var(--navy);
+    font-size: 0.85rem;
+}
+
+.footer span {
+    color: var(--gold);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .app-section {
+        margin: 13px 10px;
+        padding: 18px 13px;
+    }
+
+    .app-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .prayer-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navigation {
+        gap: 7px;
+    }
+}
